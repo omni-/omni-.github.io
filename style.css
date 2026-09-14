@@ -1,0 +1,52 @@
+:root { color-scheme: light; --paper: #f8f9fc; --ink: #202734; --muted: #596371; --blue: #234dcc; --line: #d7dce7; }
+* { box-sizing: border-box; }
+html { font-size: 16px; }
+body { margin: 0; background: var(--paper); color: var(--ink); font-family: "Segoe UI", system-ui, sans-serif; font-size: 1rem; line-height: 1.65; -webkit-font-smoothing: antialiased; }
+::selection { color: #fff; background: var(--blue); }
+a { color: var(--blue); text-decoration-thickness: 1px; text-underline-offset: .24em; }
+a:hover { text-decoration-thickness: 2px; }
+a:focus-visible { outline: 2px solid var(--blue); outline-offset: 5px; border-radius: 1px; }
+.page { width: min(100% - 3rem, 49rem); margin: 0 auto; }
+header { display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; padding: 4.25rem 0 2.75rem; }
+h1, h2, h3, p { margin: 0; }
+h1 { font-family: Georgia, "Times New Roman", serif; font-weight: 400; font-size: 3.25rem; line-height: 1.15; letter-spacing: -.065em; }
+h1 span { color: var(--blue); margin-left: .06em; }
+.intro p { margin-top: .55rem; color: var(--muted); }
+.github { font-size: .9375rem; white-space: nowrap; }
+.featured { padding: 1.9rem 2rem 2rem; background: #eef2ff; border-top: 2px solid var(--blue); }
+.eyebrow { color: var(--muted); font-family: "Cascadia Code", Consolas, monospace; font-size: .8125rem; line-height: 1.6; font-weight: 400; letter-spacing: .025em; }
+.featured .eyebrow { color: var(--blue); }
+.featured h2 { margin: .45rem 0 .65rem; font-size: 1.55rem; font-weight: 600; line-height: 1.35; letter-spacing: -.035em; }
+h2 a, h3 a { text-decoration: none; color: inherit; }
+h2 a:hover, h3 a:hover { color: var(--blue); text-decoration: underline; }
+h2 a span, h3 a span { color: var(--blue); font-family: system-ui, sans-serif; font-size: .75em; font-weight: 400; }
+.featured p:not(.eyebrow) { max-width: 40rem; }
+pre { margin: 1.25rem 0 1rem; white-space: pre-wrap; overflow-wrap: anywhere; font-family: "Cascadia Code", Consolas, monospace; font-size: .8125rem; line-height: 1.8; }
+code { font-family: inherit; }
+.prompt { color: var(--blue); }
+.text-link, .links { font-size: .875rem; }
+.projects { margin-top: 2.5rem; }
+.projects > h2 { margin-bottom: .4rem; }
+.project { display: grid; grid-template-columns: 13rem 1fr; gap: 1.5rem; padding: 1.65rem 0; border-bottom: 1px solid var(--line); }
+h3 { font-size: 1.0625rem; font-weight: 600; line-height: 1.5; letter-spacing: -.015em; }
+.kind { display: block; color: var(--muted); font-size: .8125rem; margin-top: .25rem; font-family: "Cascadia Code", Consolas, monospace; }
+.project p { color: #414c5a; }
+.links { display: flex; gap: 1.25rem; margin-top: .5rem; }
+.older { margin: 2rem 0 2.5rem; }
+.older > h2 { margin-bottom: .85rem; }
+.older p { color: var(--muted); margin-top: .25rem; font-size: .9375rem; }
+footer { display: flex; justify-content: space-between; gap: 1rem; padding: 1.2rem 0 2rem; border-top: 1px solid var(--line); font-size: .8125rem; color: var(--muted); }
+footer > span { font-family: Georgia, serif; }
+.skip { position: absolute; left: 1rem; top: -5rem; padding: .6rem 1rem; background: var(--paper); }
+.skip:focus { top: 1rem; }
+@media (max-width: 580px) {
+  .page { width: calc(100% - 2.5rem); }
+  header { padding: 2.5rem 0 2rem; align-items: flex-start; }
+  .github { margin-top: .55rem; }
+  h1 { font-size: 2.75rem; }
+  .intro p { max-width: 12rem; }
+  .featured { padding: 1.4rem 1.25rem 1.5rem; }
+  .project { grid-template-columns: 1fr; gap: .65rem; padding: 1.5rem 0; }
+  .project-name { display: flex; flex-wrap: wrap; align-items: baseline; gap: .25rem .85rem; }
+  .kind { margin: 0; }
+}
